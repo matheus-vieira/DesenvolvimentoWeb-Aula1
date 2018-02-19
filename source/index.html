@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Aula 1</title>
+    <style>
+      /* Estilizando o cabeçalho */
+      h1 {
+        background-color: yellow;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Cabeçalho 1</h1>
+    <p>Um parágrafo</p>
+    <p>Um parágrafo</p>
+    <p>Um parágrafo</p>
+    <a href="http://www.google.com" target="_blank">Pesquisar no google</a>
+    <input type="button" value="Botão" id="btnOla" />
+    <script>
+      var btn = document.getElementById("btnOla");
+      var pTexto = document.getElementsByTagName("p");
+      btn.addEventListener("click", function (event) {
+        var nome = prompt("Digite seu nome:");
+        // alert("Olá " + (nome || "mundo") + "!");
+        // alert(`Olá ${nome || "mundo" }!`);
+        pTexto.innerHTML = `Olá <strong>${nome || "mundo" }</strong>!`;
+      });
+    </script>
+  </body>
+</html>
